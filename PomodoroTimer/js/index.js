@@ -288,6 +288,7 @@ ready(function() {
         pauseTriggered = false;
         initTimes(); // reset display
         attachCounterEvents(); // reattach event handlers
+        document.getElementById('textToSpeech').value="";
         $stopResume.innerText = "Stop";
 
         $stopResume.removeEventListener("click", sessionTimer);

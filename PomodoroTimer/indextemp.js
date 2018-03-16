@@ -23,6 +23,7 @@ ready(function() {
         $start = $ID("start"),
         $stopResume = $ID("stopresume"),
         $reset = $ID("reset"),
+        tts = document.getElementById("textToSpeech"),
         breakInit = 5,
         sessionInit = 10,
         roundsInit = 3,
@@ -62,12 +63,6 @@ ready(function() {
         attachCounterEvents();
         oneTime();
     })();
-
-
-    function speech(){
-      responsiveVoice.cancel();
-      responsiveVoice.speak(document.getElementById('textToSpeech').value,"UK English Female");
-}
 
     // onetime function to change "Rounds" to "Rounds Left:" after start
     function oneTime() {
@@ -195,12 +190,14 @@ ready(function() {
         $clock.classList.add("break-animation");
         if(!pauseTriggered) {
             --breakValue;
-            if(document.getElementById('textToSpeech').value == "")
             $ID("sound").play();
+            if(tts.value == ""){
+              $ID("sound").play();
+            }
             else {
               speech();
             }
-           }
+        }
 
         // interval that displays the countdown
         breakInterval = setInterval(function() {
@@ -221,12 +218,14 @@ ready(function() {
                     $stopResume.removeEventListener("click", stopResume);
                     $start.removeEventListener("click", breakTimer);
                     $reset.addEventListener("click", resetTimer);
-                    if(document.getElementById('textToSpeech').value == "")
                     $ID("sound").play();
+                    if(tts.value == ""){
+                      $ID("sound").play();
+                    }
                     else {
                       speech();
                     }
-                  showEndscreen();
+                    showEndscreen();
                 }
             }
         }, 1000);
@@ -242,13 +241,14 @@ ready(function() {
         seconds = 60;
         initTimes();
         sessionTimer();
-        if(document.getElementById('textToSpeech').value == "")
         $ID("sound").play();
+        if(tts.value == ""){
+          $ID("sound").play();
+        }
         else {
           speech();
         }
     }
-
 
     // toggle stop/ resume name
     function stopResume() {
@@ -286,6 +286,7 @@ ready(function() {
         roundsLeft = roundsInit;
         seconds = 60;
         pauseTriggered = false;
+        tts.value="";
         initTimes(); // reset display
         attachCounterEvents(); // reattach event handlers
         $stopResume.innerText = "Stop";
@@ -306,7 +307,26 @@ ready(function() {
         // remove end screen
         removeEndScreen();
     }
+    // Speech Reminder
+function speech(){
+    if ('speechSynthesis' in window) with(speechSynthesis) {
 
+		var flag = false;
+
+			if (!flag) {
+				flag = true;
+				speech = new SpeechSynthesisUtterance();
+				speech.text = tts.value;
+				speech.voice = getVoices()[0];
+				speech.onend = function() {
+					flag = false;
+				};
+				speak(speech);
+
+			}
+	}
+
+}
         // call function on break and session both each on + and - button
     function attachCounterEvents() {
         // events for + and - buttons

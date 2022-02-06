@@ -23,6 +23,7 @@ Thanks for visiting, keep it real!
     <link rel="stylesheet" href="assets/css/icomoon.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
@@ -38,6 +39,9 @@ Thanks for visiting, keep it real!
 
     #headerwrap {
         visibility: hidden;
+    }
+    html {
+        scroll-behavior: smooth;
     }
     </style>
 </head>
@@ -91,7 +95,7 @@ Thanks for visiting, keep it real!
     <!-- //////////////////////////////////////////////// PORTFOLIO SECTION ////////////////////////////////////////////////  -->
     <div class="section-content" id="portfolio" name="portfolio">
     <h2 class="centered sechead firstsec" >PORTFOLIO</h2>
-    <h3 class="centered sechead subsec">Projects</h3>
+    <strong><h3 class="centered sechead subsec">Featured Work</h3></strong>
     <br>
     <div class="container" >
         <div class="row">
@@ -115,7 +119,7 @@ Thanks for visiting, keep it real!
                         <i class="fa fa-android caption-role" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="ANDROID DEVELOPER"></i>
                 </h5>
                 </div>
-         
+
             </div>
 
             <!-- /col -->
@@ -187,41 +191,10 @@ Thanks for visiting, keep it real!
             <!-- /col -->
         </div>
         <!-- NEW ROW -->
-
-        <!-- /row -->
-        <h3 class="centered sechead subsec">Fun-Time Work</h3>
-        <br>
-        <div class="row row1">
-            <!-- PORTFOLIO IMAGE 3 -->
-            <div data-toggle="modal" onclick='$("html").css("overflow", "hidden");' href="#pomodoro" class="col-md-3" data-sr="wait 0.1s, ease-in-out 50px">
-                <div class="grid mask">
-                    <figure class="tintPurple">
-                        <img class="img-responsive tint_image" src="assets/img/portfolio/pomodoro.png" alt="">
-                        <figcaption>
-                            <h5> POMODORO TIMER </h5>
-                            <a data-toggle="modal" onclick='$("html").css("overflow", "hidden");' href="#pd" class="btn btn-primary btn-lg">Learn More</a>
-                        </figcaption>
-                        <!-- /figcaption -->
-                    </figure>
-                    <!-- /figure -->
-                </div>
-                <!-- /grid-mask -->
-                <div class="caption-photo">
-                    <h5 class="pop2">POMODORO TIMER<i class="fa fa-sitemap caption-role" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="UX DESIGNER">  </i><i class="fa fa-code caption-role" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="DEVELOPER"></i></h5>
-                </div>
-            </div>
-            <!-- /col -->
-            <!-- /col -->
-            <!-- /col -->
-        </div>
-        <!-- /row -->
-        <!-- /row -->
-        <br>
     </div>
   </div>
 
     <!-- /row -->
-    <br>
     <!-- //////////////////////////////////////////////// RESEARCH & EXPLORATION SECTION ////////////////////////////////////////////////  -->
 
     <!-- //////////////////////////////////////////////// DESIGN PROCESS ////////////////////////////////////////////////  -->
@@ -307,7 +280,7 @@ Thanks for visiting, keep it real!
                     <h3 class="name"><div id="abouthello">hello</div></h3>
                     <p> I'm Aayush. I drink tea and code all day, everyday! Constantly involved in building projects, that are either for my fun-time, course-work or client's business. When I am not coding, you'll find me cooking, working out, or chilling in a bar with friends.
                         <br>
-                        <br> I am a bachlore in Computer Science from Iowa State University and an Associates Degree in C.E. from Gujarat Technological University. As a student, I was actively involved in clubs, organizing hackathons and other leadership positions. 
+                        <br> I am a bachlore in Computer Science from Iowa State University and an Associates Degree in C.E. from Gujarat Technological University. As a student, I was actively involved in clubs, organizing hackathons and other leadership positions.
                         <br>
                         <br> Summer of 2018 I interned at Wellmark BCBS as a JavaScript/MEAN Stack Developer. At Wellmark, I developed a system that automates generation and population of data for testing. Desigend a POC to generate future test beds to support strategic investments. And built data lineage visualization for constantly updating scripts in Production using C# and
                         Informatica. It was a stunning industrial experience all around.
@@ -324,10 +297,10 @@ Thanks for visiting, keep it real!
                     <br>
                     <br>
                     <a href="docs/AayushShahResume.pdf" target="_blank">
-                        <button type="button" class="btn-lg btn-info btn-mod center-block">Download Resume</button>
+                        <button type="button" class="btn-lg btn-info btn-mod center-block btn-grad">Download Resume 📋 </button>
                     </a>
                     <a href="https://www.linkedin.com/in/aayushshah7" target="_blank">
-                        <button type="button" class="btn-lg btn-info btn-mod center-block">&nbsp; &nbsp; View LinkedIn &nbsp; &nbsp;</button>
+                        <button type="button" class="btn-lg btn-info btn-mod center-block btn-grad">&nbsp; &nbsp; View LinkedIn 🤓 &nbsp; &nbsp;</button>
                     </a>
                 </div>
             </div>
@@ -370,7 +343,7 @@ Thanks for visiting, keep it real!
             </div>
             <div class="col-lg-6 col-lg-offset-3 hidden-form form-alt-btn">
                 <div class="btn-ct-bottom">
-                    <button data-clipboard-text="aayushah@gmail.com" type="button" class="btn-lg btn-yellow center-block btn-email-copy btn-contact"> Click to Copy Email Address</button>
+                    <button data-clipboard-text="shahj.aayush@gmail.com" type="button" class="btn-lg btn-yellow center-block btn-email-copy btn-contact"> Click to Copy Email Address</button>
                 </div>
             </div>
             <div class="col-lg-12">
@@ -378,14 +351,16 @@ Thanks for visiting, keep it real!
                     <div class="center-block dividerContact"></div>
                     <div class="col-lg-4">
                         <a href="https://github.com/ajsh"><span> github  /  </span></a>
-                        <a href="https://www.linkedin.com/in/aayushshah7"><span> linkedin</span></a>
+                        <a href="https://www.linkedin.com/in/aayushShah1"><span> linkedin</span></a>
                     </div>
-                    <div class="col-lg-4">                       
+                    <div class="col-lg-4">
                     </div>
                     <script type="text/javascript" src="assets/js/abouthello.js"></script>
-                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>                    
+                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                    
                     <div class="col-lg-4 footer-last">
-                        <p> ajsh - Copyright 2021</p>
+                        <p> Built at <i class="bi bi-moon-fill" aria-hidden="true" style="font-size: 2rem; color:#5D4796;">
+                        </i>by <strong>Aayush Shah</strong> - Copyright 2022</p>
                     </div>
                 </div>
             </div>
@@ -451,7 +426,7 @@ Thanks for visiting, keep it real!
                                 <b>Technologies:</b> Infrared, Machine Learning, Computer Vision, Cloud.
                             </p>
                         </div>
-               
+
                         <!-- modal-content-style -->
                     </div>
                     <!-- modal-body -->
@@ -475,7 +450,7 @@ Thanks for visiting, keep it real!
                             <p class="modal-text">
                                 <b>AR Sudoku</b> uses a combination of Computer Vision, Machine Learning, and Augmented Reality to give a magical user experience that “just works” ( i.e. solves the puzzel is real time ) when you point your phone at a Sudoku puzzle.
 
-                                 One of the reason I choose to build this app was that I knew classifying digits is the "hello world" of machine learning. I wanted to dip my toe in the ocean of Machine Learning while working on a real-world problem. 
+                                 One of the reason I choose to build this app was that I knew classifying digits is the "hello world" of machine learning. I wanted to dip my toe in the ocean of Machine Learning while working on a real-world problem.
 
                             </p>
                             <p class="modal-text">
@@ -484,7 +459,7 @@ Thanks for visiting, keep it real!
                                 <b>Technologies:</b> Swift, ARkit, Vision lib., MINST ML Model, Recursive algorithm to solve puzzle .
                             </p>
                         </div>
-      
+
                         <!-- modal-content-style -->
                     </div>
                     <!-- modal-body -->
@@ -506,12 +481,12 @@ Thanks for visiting, keep it real!
                         </div>
                         <div class="col-lg-4 col-lg-offset-4 modal-body-text">
                             <p class="modal-text">
-                                <b>Epi Predictor</b>, is a one of my personal & touching project. 
+                                <b>Epi Predictor</b>, is a one of my personal & touching project.
                                 Epilepsy is a neurologic disorder causing uncontrollable seizure episodes.
-                                Over 65 million people live with the condition. 
+                                Over 65 million people live with the condition.
                                 Timely and accurate seizure prediction can help patients to take control of their lives.
 
-                                <br/><br/>EpiPredict is to integrate EEG handset technology (provided by Muse) to clasify and modal EEG data that signals a seizure and alarm the loved ones before the seizure takes palce. 
+                                <br/><br/>EpiPredict is to integrate EEG handset technology (provided by Muse) to clasify and modal EEG data that signals a seizure and alarm the loved ones before the seizure takes palce.
                                 During our course research we found accurate EEG modals can predict seizures hours in advance.
                             </p>
                             <p class="modal-text">
@@ -597,7 +572,6 @@ Thanks for visiting, keep it real!
         <!-- Placed at the end of the document so the pages load faster -->
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
-        <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
         <script type="text/javascript" src="assets/js/app.js"></script>
         <script type="text/javascript" src="assets/js/abouthello.js"></script>
